@@ -1,4 +1,5 @@
 # @adonisjs/eslint-config
+
 > Compatible with ESLint 9.0 and Prettier 3.0
 
 <hr>
@@ -49,24 +50,23 @@ export default configApp()
 ```
 
 ## Adding additional config blocks
+
 You can pass additional config blocks as multiple arguments to one of the preset functions.
 
 ```ts
 import { configApp, INCLUDE_LIST, IGNORE_LIST } from '@adonisjs/eslint-config'
 
-export default configApp(
-  {
- name: 'Custom config',
- files: INCLUDE_LIST,
- ignores: IGNORE_LIST,
- plugins: {
-      // ESLint plugins go here
-    },
- rules: {
-      // ESLint rules go here
-    },
+export default configApp({
+  name: 'Custom config',
+  files: INCLUDE_LIST,
+  ignores: IGNORE_LIST,
+  plugins: {
+    // ESLint plugins go here
   },
-)
+  rules: {
+    // ESLint rules go here
+  },
+})
 ```
 
 <div align="center">
