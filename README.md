@@ -14,7 +14,7 @@
 
 <div align="center">
 
-[![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
+[![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
 
 </div>
 
@@ -89,8 +89,6 @@ export default configApp({
   <sub>Built with ❤︎ by <a href="https://github.com/Julien-R44">Julien Ripouteau</a> and <a href="https://github.com/thetutlage">Harminder Virk</a>
 </div>
 
-[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/adonisjs/eslint-config/checks.yml?branch=develop&label=Tests&style=for-the-badge
-[gh-workflow-url]: https://github.com/adonisjs/eslint-config/actions/workflows/checks.yml 'Github action'
 [npm-image]: https://img.shields.io/npm/v/@adonisjs/eslint-config/latest.svg?style=for-the-badge&logo=npm
 [npm-url]: https://www.npmjs.com/package/@adonisjs/eslint-config/v/latest 'npm'
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
