@@ -14,7 +14,7 @@
 
 <div align="center">
 
-[![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
+[![npm-image]][npm-url] [![license-image]][license-url]
 
 </div>
 
@@ -23,10 +23,10 @@
 Install the package from the npm registry.
 
 ```sh
-npm i -D @adonisjs/eslint-config
+npm i -D @adonisjs/eslint-config@beta
 
 # Install peer dependencies
-npm i -D eslint prettier
+npm i -D eslint@9 prettier@3
 ```
 
 ## Usage
@@ -91,6 +91,5 @@ export default configApp({
 
 [npm-image]: https://img.shields.io/npm/v/@adonisjs/eslint-config/latest.svg?style=for-the-badge&logo=npm
 [npm-url]: https://www.npmjs.com/package/@adonisjs/eslint-config/v/latest 'npm'
-[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [license-url]: LICENSE.md
 [license-image]: https://img.shields.io/github/license/adonisjs/adonis-framework?style=for-the-badge
