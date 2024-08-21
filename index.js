@@ -48,7 +48,7 @@ export const IGNORE_LIST = [
 export const PLUGINS_LIST = {
   '@unicorn': unicorn,
   '@stylistic': stylistic,
-  ...eslintPluginPrettierRecommended.plugins
+  ...eslintPluginPrettierRecommended.plugins,
 }
 
 /**
@@ -169,14 +169,14 @@ export const RULES_LIST = {
 /**
  * Configures ESLint to use an opinionated config tailored for
  * creating a TypeScript library.
- * 
+ *
  * You may pass additional config blocks as multiple
  * arguments to this function.
- * 
+ *
  * @example
  * ```js
  * configPkg()
- * 
+ *
  * configPkg({
  *   files: INCLUDE_LIST,
  *   ignore: IGNORE_LIST,
@@ -205,14 +205,14 @@ export function configPkg(...configBlocksToMerge) {
 /**
  * Configures ESLint to use an opinionated config tailored for
  * an AdonisJS application
- * 
+ *
  * You may pass additional config blocks as multiple
  * arguments to this function.
- * 
+ *
  * @example
  * ```js
  * configApp()
- * 
+ *
  * configApp({
  *   files: INCLUDE_LIST,
  *   ignore: IGNORE_LIST,
