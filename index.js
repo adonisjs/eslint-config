@@ -112,19 +112,6 @@ export const RULES_LIST = {
   'no-unreachable': ['error'],
   'no-multi-spaces': ['error'],
 
-  '@stylistic/semi': [2, 'never'],
-  '@stylistic/quotes': ['error', 'single'],
-  '@stylistic/space-before-function-paren': ['error', 'always'],
-  '@stylistic/indent': [
-    'error',
-    2,
-    {
-      SwitchCase: 1,
-      flatTernaryExpressions: false,
-      ignoredNodes: ['TSTypeParameterInstantiation'],
-    },
-  ],
-
   '@typescript-eslint/no-shadow': 'error',
   '@typescript-eslint/naming-convention': [
     'error',
