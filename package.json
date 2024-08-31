@@ -1,6 +1,6 @@
 {
   "name": "@adonisjs/eslint-config",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "description": "The base configuration for ESLint used by AdonisJS applications and packages",
   "main": "index.js",
   "type": "module",
