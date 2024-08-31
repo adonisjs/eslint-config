@@ -10,6 +10,7 @@
 import tseslint from 'typescript-eslint'
 import unicorn from 'eslint-plugin-unicorn'
 import stylistic from '@stylistic/eslint-plugin-ts'
+import adonisJSPlugin from '@adonisjs/eslint-plugin'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 /**
@@ -218,12 +219,19 @@ export function configApp(...configBlocksToMerge) {
     tseslint.configs.base,
     {
       name: 'Plugins list',
-      plugins: PLUGINS_LIST,
+      plugins: {
+        ...PLUGINS_LIST,
+        '@adonisjs': adonisJSPlugin,
+      },
     },
     {
       name: 'AdonisJS app defaults',
       files: INCLUDE_LIST,
-      rules: RULES_LIST,
+      rules: {
+        ...RULES_LIST,
+        '@adonisjs/prefer-lazy-controller-import': ['error'],
+        '@adonisjs/prefer-lazy-listener-import': ['error'],
+      },
     },
     ...configBlocksToMerge
   )
