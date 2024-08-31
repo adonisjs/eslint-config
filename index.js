@@ -174,6 +174,9 @@ export const RULES_LIST = {
  */
 export function configPkg(...configBlocksToMerge) {
   return tseslint.config(
+    {
+      ignores: IGNORE_LIST,
+    },
     tseslint.configs.base,
     {
       name: 'Plugins list',
@@ -182,7 +185,6 @@ export function configPkg(...configBlocksToMerge) {
     {
       name: 'AdonisJS pkg defaults',
       files: INCLUDE_LIST,
-      ignores: IGNORE_LIST,
       rules: RULES_LIST,
     },
     ...configBlocksToMerge
@@ -210,6 +212,9 @@ export function configPkg(...configBlocksToMerge) {
  */
 export function configApp(...configBlocksToMerge) {
   return tseslint.config(
+    {
+      ignores: IGNORE_LIST,
+    },
     tseslint.configs.base,
     {
       name: 'Plugins list',
@@ -218,7 +223,6 @@ export function configApp(...configBlocksToMerge) {
     {
       name: 'AdonisJS app defaults',
       files: INCLUDE_LIST,
-      ignores: IGNORE_LIST,
       rules: RULES_LIST,
     },
     ...configBlocksToMerge
