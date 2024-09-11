@@ -16,7 +16,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 /**
  * Default list of files to include
  */
-export const INCLUDE_LIST = ['**!(resources)/*.ts']
+export const INCLUDE_LIST = ['**/*.ts']
 
 /**
  * Default set of files to ignore
@@ -41,6 +41,7 @@ export const IGNORE_LIST = [
   '__snapshots__',
   '!.github',
   '!.vscode',
+  'resources/**'
 ]
 
 /**
