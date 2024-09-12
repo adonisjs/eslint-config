@@ -27,21 +27,21 @@ export const IGNORE_LIST = [
   '*.min.*',
   '*.d.ts',
   'CHANGELOG.md',
-  'dist',
+  'dist/**',
   'LICENSE*',
-  'output',
-  'coverage',
-  'temp',
-  'build',
-  'dist',
-  'public/assets',
+  'output/**',
+  'coverage/**',
+  'temp/**',
+  'build/**',
+  'dist/**',
+  'public/assets/**',
   'pnpm-lock.yaml',
   'yarn.lock',
   'package-lock.json',
-  '__snapshots__',
+  '__snapshots__/**',
+  'resources/**',
   '!.github',
   '!.vscode',
-  'resources/**'
 ]
 
 /**
@@ -214,9 +214,6 @@ export function configPkg(...configBlocksToMerge) {
  */
 export function configApp(...configBlocksToMerge) {
   return tseslint.config(
-    {
-      ignores: IGNORE_LIST,
-    },
     tseslint.configs.base,
     {
       name: 'Plugins list',
@@ -228,6 +225,7 @@ export function configApp(...configBlocksToMerge) {
     {
       name: 'AdonisJS app defaults',
       files: INCLUDE_LIST,
+      ignores: IGNORE_LIST,
       rules: {
         ...RULES_LIST,
         '@adonisjs/prefer-lazy-controller-import': ['error'],
