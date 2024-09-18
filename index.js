@@ -16,7 +16,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 /**
  * Default list of files to include
  */
-export const INCLUDE_LIST = ['**!(resources)/*.ts']
+export const INCLUDE_LIST = ['**/*.ts']
 
 /**
  * Default set of files to ignore
@@ -27,18 +27,19 @@ export const IGNORE_LIST = [
   '*.min.*',
   '*.d.ts',
   'CHANGELOG.md',
-  'dist',
+  'dist/**',
   'LICENSE*',
-  'output',
-  'coverage',
-  'temp',
-  'build',
-  'dist',
-  'public/assets',
+  'output/**',
+  'coverage/**',
+  'temp/**',
+  'build/**',
+  'dist/**',
+  'public/assets/**',
   'pnpm-lock.yaml',
   'yarn.lock',
   'package-lock.json',
-  '__snapshots__',
+  '__snapshots__/**',
+  'resources/**',
   '!.github',
   '!.vscode',
 ]
@@ -175,9 +176,6 @@ export const RULES_LIST = {
  */
 export function configPkg(...configBlocksToMerge) {
   return tseslint.config(
-    {
-      ignores: IGNORE_LIST,
-    },
     tseslint.configs.base,
     {
       name: 'Plugins list',
@@ -186,6 +184,7 @@ export function configPkg(...configBlocksToMerge) {
     {
       name: 'AdonisJS pkg defaults',
       files: INCLUDE_LIST,
+      ignores: IGNORE_LIST,
       rules: RULES_LIST,
     },
     ...configBlocksToMerge
@@ -213,9 +212,6 @@ export function configPkg(...configBlocksToMerge) {
  */
 export function configApp(...configBlocksToMerge) {
   return tseslint.config(
-    {
-      ignores: IGNORE_LIST,
-    },
     tseslint.configs.base,
     {
       name: 'Plugins list',
@@ -227,6 +223,7 @@ export function configApp(...configBlocksToMerge) {
     {
       name: 'AdonisJS app defaults',
       files: INCLUDE_LIST,
+      ignores: IGNORE_LIST,
       rules: {
         ...RULES_LIST,
         '@adonisjs/prefer-lazy-controller-import': ['error'],
