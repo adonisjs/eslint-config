@@ -173,6 +173,8 @@ export const RULES_LIST = {
  *   }
  * })
  * ```
+ *
+ * @param {import('typescript-eslint').ConfigWithExtends[]} configBlocksToMerge
  */
 export function configPkg(...configBlocksToMerge) {
   return tseslint.config(
@@ -209,6 +211,8 @@ export function configPkg(...configBlocksToMerge) {
  *   }
  * })
  * ```
+ *
+ * @param {import('typescript-eslint').ConfigWithExtends[]} configBlocksToMerge
  */
 export function configApp(...configBlocksToMerge) {
   return tseslint.config(
