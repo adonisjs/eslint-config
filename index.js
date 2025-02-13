@@ -33,6 +33,7 @@ export const GLOBAL_IGNORE_LIST = [
   'coverage/**',
   'temp/**',
   'build/**',
+  '.yalc/**',
   'pnpm-lock.yaml',
   'yarn.lock',
   'package-lock.json',
