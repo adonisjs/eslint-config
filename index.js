@@ -109,6 +109,12 @@ export const RULES_LIST = {
   'no-unreachable': ['error'],
   'no-multi-spaces': ['error'],
 
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    {
+      fixStyle: 'inline-type-imports',
+    },
+  ],
   '@typescript-eslint/no-shadow': 'error',
   '@typescript-eslint/naming-convention': [
     'error',
