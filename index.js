@@ -9,7 +9,7 @@
 
 import tseslint from 'typescript-eslint'
 import unicorn from 'eslint-plugin-unicorn'
-import stylistic from '@stylistic/eslint-plugin-ts'
+import stylistic from '@stylistic/eslint-plugin'
 import adonisJSPlugin from '@adonisjs/eslint-plugin'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
