@@ -23,7 +23,7 @@
 Install the package from the npm registry.
 
 ```sh
-npm i -D @adonisjs/eslint-config@beta
+npm i -D @adonisjs/eslint-config
 
 # Install peer dependencies
 npm i -D eslint@9 prettier@3
