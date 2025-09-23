@@ -113,6 +113,7 @@ export const RULES_LIST = {
     'error',
     {
       fixStyle: 'inline-type-imports',
+      disallowTypeAnnotations: false,
     },
   ],
   '@typescript-eslint/no-shadow': 'error',
