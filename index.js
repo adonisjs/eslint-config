@@ -156,7 +156,7 @@ export const RULES_LIST = {
  * ```
  */
 export function configPkg(...configBlocksToMerge) {
-  return tseslint.config(
+  return tseslint.configs(
     { ignores: GLOBAL_IGNORE_LIST },
     tseslint.configs.base,
     { name: 'Plugins list', plugins: PLUGINS_LIST },
@@ -190,9 +190,17 @@ export function configPkg(...configBlocksToMerge) {
  * ```
  */
 export function configApp(...configBlocksToMerge) {
-  return tseslint.config(
+  return tseslint.configs(
     { ignores: GLOBAL_IGNORE_LIST },
     tseslint.configs.base,
+    {
+      languageOptions: {
+        parserOptions: {
+          experimentalDecorators: true,
+          emitDecoratorMetadata: true,
+        },
+      },
+    },
     { name: 'Plugins list', plugins: { ...PLUGINS_LIST, '@adonisjs': adonisJSPlugin } },
     {
       name: 'AdonisJS app defaults',
