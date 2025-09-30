@@ -156,7 +156,7 @@ export const RULES_LIST = {
  * ```
  */
 export function configPkg(...configBlocksToMerge) {
-  return tseslint.configs(
+  return tseslint.config(
     { ignores: GLOBAL_IGNORE_LIST },
     tseslint.configs.base,
     { name: 'Plugins list', plugins: PLUGINS_LIST },
@@ -190,7 +190,7 @@ export function configPkg(...configBlocksToMerge) {
  * ```
  */
 export function configApp(...configBlocksToMerge) {
-  return tseslint.configs(
+  return tseslint.config(
     { ignores: GLOBAL_IGNORE_LIST },
     tseslint.configs.base,
     {
