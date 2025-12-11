@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@adonisjs/prettier-config": "^1.4.5",
-    "@release-it/conventional-changelog": "^10.0.1",
-    "eslint": "^9.36.0",
-    "prettier": "^3.6.2",
-    "release-it": "^19.0.5"
+    "@release-it/conventional-changelog": "^10.0.3",
+    "eslint": "^9.39.1",
+    "prettier": "^3.7.4",
+    "release-it": "^19.1.0"
   },
   "peerDependencies": {
     "eslint": "^9.9.0",
@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "@adonisjs/eslint-plugin": "^2.0.1",
-    "@stylistic/eslint-plugin": "^5.4.0",
+    "@stylistic/eslint-plugin": "^5.6.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "eslint-plugin-unicorn": "^61.0.2",
-    "typescript-eslint": "^8.45.0"
+    "eslint-plugin-unicorn": "^62.0.0",
+    "typescript-eslint": "^8.49.0"
   },
   "homepage": "https://github.com/adonisjs/eslint-config#readme",
   "bugs": {
