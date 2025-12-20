@@ -42,7 +42,12 @@ export const GLOBAL_IGNORE_LIST = [
 /**
  * Default set of files to ignore
  */
-export const ADONIS_IGNORE_LIST = ['public/assets/**', '__snapshots__/**', 'resources/**']
+export const ADONIS_IGNORE_LIST = [
+  'public/assets/**',
+  '__snapshots__/**',
+  'resources/**',
+  '.adonisjs/**',
+]
 
 /**
  * Default set of plugins to apply to the config
