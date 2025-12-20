@@ -171,6 +171,30 @@ export function configPkg(...configBlocksToMerge) {
 }
 
 /**
+ * Inertia-specific ESLint config block
+ */
+const inertiaConfigBlock = {
+  name: 'AdonisJS inertia app overrides',
+  files: ['inertia/**/*.{ts,tsx}'],
+  rules: {
+    '@adonisjs/no-backend-import-in-frontend': ['error'],
+    '@adonisjs/prefer-adonisjs-inertia-link': ['error'],
+  },
+}
+
+/**
+ * Check if @adonisjs/inertia is installed
+ */
+function isInertiaInstalled() {
+  try {
+    import.meta.resolve('@adonisjs/inertia')
+    return true
+  } catch {
+    return false
+  }
+}
+
+/**
  * Configures ESLint to use an opinionated config tailored for
  * an AdonisJS application
  *
@@ -190,6 +214,8 @@ export function configPkg(...configBlocksToMerge) {
  * ```
  */
 export function configApp(...configBlocksToMerge) {
+  const inertia = isInertiaInstalled()
+
   return tseslint.config(
     { ignores: GLOBAL_IGNORE_LIST },
     tseslint.configs.base,
@@ -212,6 +238,7 @@ export function configApp(...configBlocksToMerge) {
         '@adonisjs/prefer-lazy-listener-import': ['error'],
       },
     },
+    ...(inertia ? [inertiaConfigBlock] : []),
     ...configBlocksToMerge
   )
 }

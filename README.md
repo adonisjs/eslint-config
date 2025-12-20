@@ -49,6 +49,13 @@ import { configApp } from '@adonisjs/eslint-config'
 export default configApp()
 ```
 
+### Inertia support
+
+If `@adonisjs/inertia` is installed, the following rules will be automatically enabled for files in `inertia/**`:
+
+- `@adonisjs/no-backend-import-in-frontend`: Prevents importing backend code in frontend files
+- `@adonisjs/prefer-adonisjs-inertia-link`: Suggests using AdonisJS typesafe `<Link>` component instead of Inertia's `<Link>` component
+
 ## Adding additional config blocks
 
 You can pass additional config blocks as multiple arguments to one of the preset functions.
