@@ -184,6 +184,7 @@ const inertiaConfigBlock = {
   rules: {
     '@adonisjs/no-backend-import-in-frontend': ['error'],
     '@adonisjs/prefer-adonisjs-inertia-link': ['error'],
+    '@adonisjs/prefer-adonisjs-inertia-form': ['error'],
   },
 }
 
