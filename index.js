@@ -105,7 +105,7 @@ export const RULES_LIST = {
   'valid-typeof': ['error', { requireStringLiterals: true }],
   'brace-style': ['error', '1tbs'],
   'curly': ['error', 'all'],
-  'handle-callback-err': ['error', '^(err|error)$'],
+  'n/handle-callback-err': ['error', '^(err|error)$'],
   'max-len': [
     'error',
     { code: 100, comments: 120, ignoreUrls: true, ignoreTemplateLiterals: true },
