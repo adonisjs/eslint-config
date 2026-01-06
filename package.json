@@ -8,6 +8,7 @@
     "index.js"
   ],
   "scripts": {
+    "lint": "eslint .",
     "format": "prettier --write .",
     "release": "release-it"
   },
