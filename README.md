@@ -61,12 +61,12 @@ If `@adonisjs/inertia` is installed, the following rules will be automatically e
 You can pass additional config blocks as multiple arguments to one of the preset functions.
 
 ```ts
-import { configApp, INCLUDE_LIST, IGNORE_LIST } from '@adonisjs/eslint-config'
+import { configApp, INCLUDE_LIST, GLOBAL_IGNORE_LIST } from '@adonisjs/eslint-config'
 
 export default configApp({
   name: 'Custom config',
   files: INCLUDE_LIST,
-  ignores: IGNORE_LIST,
+  ignores: GLOBAL_IGNORE_LIST,
   plugins: {
     // ESLint plugins go here
   },
