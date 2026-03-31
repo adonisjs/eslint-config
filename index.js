@@ -100,7 +100,10 @@ export const RULES_LIST = {
   '@stylistic/comma-dangle': ['error', 'always-multiline'],
   '@stylistic/eol-last': ['error', 'always'],
   '@stylistic/indent': 'off',
-  '@stylistic/max-len': ['error', { code: 100, comments: 120, ignoreUrls: true, ignoreTemplateLiterals: true },],
+  '@stylistic/max-len': [
+    'error',
+    { code: 100, comments: 120, ignoreUrls: true, ignoreTemplateLiterals: true },
+  ],
   '@stylistic/new-parens': ['error', 'always'],
   '@stylistic/no-mixed-spaces-and-tabs': ['error'],
   '@stylistic/no-multi-spaces': ['error'],
