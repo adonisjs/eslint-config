@@ -12,6 +12,8 @@ import unicorn from 'eslint-plugin-unicorn'
 import stylistic from '@stylistic/eslint-plugin'
 import adonisJSPlugin from '@adonisjs/eslint-plugin'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import vuePlugin from 'eslint-plugin-vue'
+import vueParser from 'vue-eslint-parser'
 
 /**
  * Default list of files to include
@@ -190,11 +192,36 @@ const inertiaConfigBlock = {
 }
 
 /**
- * Check if @adonisjs/inertia is installed
+ * Vue-specific ESLint config block
  */
-function isInertiaInstalled() {
+const vueConfigBlock = [
+  ...vuePlugin.configs['flat/recommended'],
+  {
+    name: 'AdonisJS Vue app overrides',
+    files: ['inertia/**/*.vue'],
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+    rules: {
+      'vue/component-api-style': ['error', ['script-setup', 'composition']],
+      'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+      'vue/define-emits-declaration': ['error', 'type-based'],
+      'vue/define-props-declaration': ['error', 'type-based'],
+      'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
+      'vue/multi-word-component-names': 'off',
+    },
+  },
+]
+
+/**
+ * Check if a package is installed
+ */
+function isPackageInstalled(pkg) {
   try {
-    import.meta.resolve('@adonisjs/inertia')
+    import.meta.resolve(pkg)
     return true
   } catch {
     return false
@@ -221,7 +248,8 @@ function isInertiaInstalled() {
  * ```
  */
 export function configApp(...configBlocksToMerge) {
-  const inertia = isInertiaInstalled()
+  const inertia = isPackageInstalled('@adonisjs/inertia')
+  const vue = isPackageInstalled('vue')
 
   return tseslint.config(
     { ignores: GLOBAL_IGNORE_LIST },
@@ -246,6 +274,7 @@ export function configApp(...configBlocksToMerge) {
       },
     },
     ...(inertia ? [inertiaConfigBlock] : []),
+    ...(vue ? vueConfigBlock : []),
     ...configBlocksToMerge
   )
 }
