@@ -181,7 +181,7 @@ export function configPkg(...configBlocksToMerge) {
  */
 const inertiaConfigBlock = {
   name: 'AdonisJS inertia app overrides',
-  files: ['inertia/**/*.{ts,tsx}'],
+  files: ['inertia/**/*.{ts,tsx,vue,svelte}'],
   rules: {
     '@adonisjs/no-backend-import-in-frontend': ['error'],
     '@adonisjs/prefer-adonisjs-inertia-link': ['error'],
