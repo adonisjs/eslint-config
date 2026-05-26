@@ -13,7 +13,6 @@ import stylistic from '@stylistic/eslint-plugin'
 import adonisJSPlugin from '@adonisjs/eslint-plugin'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import vuePlugin from 'eslint-plugin-vue'
-import vueParser from 'vue-eslint-parser'
 
 /**
  * Default list of files to include
@@ -200,7 +199,6 @@ const vueConfigBlock = [
     name: 'AdonisJS Vue app overrides',
     files: ['inertia/**/*.vue'],
     languageOptions: {
-      parser: vueParser,
       parserOptions: {
         parser: tseslint.parser,
       },
